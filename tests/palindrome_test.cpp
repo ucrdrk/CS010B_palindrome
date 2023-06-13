@@ -7,7 +7,7 @@ TEST(PalindromeTest, RecursiveTrue) {
   EXPECT_TRUE(utils::recursive::is_palindrome(""));
   EXPECT_TRUE(utils::recursive::is_palindrome("o"));
   EXPECT_TRUE(utils::recursive::is_palindrome("bob"));
-  EXPECT_TRUE(utils::recursive::is_palindrome("boob"));
+  EXPECT_TRUE(utils::recursive::is_palindrome("noon"));
 }
 
 TEST(PalindromeTest, RecursiveFalse) {
@@ -19,10 +19,10 @@ TEST(PalindromeTest, RecursiveFalse) {
 
 TEST(PalindromeTest, IterativeTrue) {
   // Expect two strings not to be equal.
-  EXPECT_TRUE(utils::iterative::is_palindrome(""));
-  EXPECT_TRUE(utils::iterative::is_palindrome("o"));
-  EXPECT_TRUE(utils::iterative::is_palindrome("bob"));
-  EXPECT_TRUE(utils::iterative::is_palindrome("boob"));
+  EXPECT_TRUE(utils::iterative::is_palindrome(""))     << "Fails on empty string";
+  EXPECT_TRUE(utils::iterative::is_palindrome("o"))    << "Fails on \"o\", which is a palindrome";
+  EXPECT_TRUE(utils::iterative::is_palindrome("bob"))  << "Fails on \"bob\", which is a palindrome";
+  EXPECT_TRUE(utils::iterative::is_palindrome("noon")) << "Fails on \"bob\", which is a palindrome";
 }
 
 TEST(PalindromeTest, IterativeFalse) {
