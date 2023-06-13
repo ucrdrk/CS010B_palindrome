@@ -22,7 +22,7 @@ namespace utils {
         return is_palindrome(++first, --last);
       }
     }
-    auto is_palindrome(const std::string &str) -> bool{
+    auto is_palindrome(const std::string &str) -> bool {
       return is_palindrome(str.begin(), str.end()-1);
     }
   }
