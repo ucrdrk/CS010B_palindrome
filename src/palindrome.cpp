@@ -12,7 +12,7 @@
 namespace utils {
   namespace recursive {
     namespace {
-      bool is_palindrome(std::string::const_iterator first, std::string::const_iterator last) {
+      auto is_palindrome(std::string::const_iterator first, std::string::const_iterator last) -> bool {
         if(first >= last) { 
           return true;
         }
