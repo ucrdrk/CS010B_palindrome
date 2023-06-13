@@ -12,29 +12,33 @@
 namespace utils {
   namespace recursive {
     namespace {
-      bool is_palindrome(std::string::const_iterator first, std::string::const_iterator last) {
-        if(first >= last) return true;
-        if(*first != *last) return false;
+      auto is_palindrome(std::string::const_iterator first, std::string::const_iterator last) -> bool {
+        if(first >= last) { 
+          return true;
+        }
+        if(*first != *last) { 
+          return false; 
+        }
         return is_palindrome(++first, --last);
       }
     }
-    bool is_palindrome(const std::string &str) {
+    auto is_palindrome(const std::string &str) -> bool{
       return is_palindrome(str.begin(), str.end()-1);
     }
   }
 
-
-
   namespace iterative {
-    bool is_palindrome(const std::string &str) {
-      auto i = str.begin(), j = str.end()-1;
-      for(; i < j && *i == *j; ++i, --j);
-      return i >= j;
+    auto is_palindrome(const std::string &str) -> bool {
+      auto first = str.begin();
+      auto last = str.end()-1;
+      for(; first < last && *first == *last; ++first, --last) {
+      }
+      return first >= last;
     }
   }
 
   namespace algorithmic {
-    bool is_palindrome(const std::string &str) {
+    auto is_palindrome(const std::string &str) -> bool {
       return std::mismatch(str.begin(), str.end(), str.rbegin()).first == str.end();
     }
   }
