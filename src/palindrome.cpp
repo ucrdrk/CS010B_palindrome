@@ -19,7 +19,7 @@ namespace utils {
         if(*first != *last) { 
           return false; 
         }
-        return is_palindrome(++first, --last);
+        return is_palindrome(++first, --ast);
       }
     }
     auto is_palindrome(const std::string &str) -> bool{
