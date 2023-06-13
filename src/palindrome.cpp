@@ -1,7 +1,7 @@
 //===============================================================================
 //
 // Header for palindrome definitions
-// email: aknig00@ucr.edu
+// email: aknig007@ucr.edu
 // (C) 2023 Allan Knight - All rights reserved
 //
 //===============================================================================
