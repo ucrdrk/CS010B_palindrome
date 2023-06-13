@@ -21,7 +21,7 @@ enable_testing()
 
 add_executable(
   palindrome_test
-  test/palindrome_test.cpp src/palindrome.cpp
+  tests/palindrome_test.cpp src/palindrome.cpp
 )
 
 target_link_libraries(
