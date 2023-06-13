@@ -33,7 +33,7 @@ namespace utils {
       auto last = str.end()-1;
       for(; first < last && *first == *last; ++first, --last) {
       }
-      return first >= last;
+      return first == last;
     }
   }
 
